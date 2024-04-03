@@ -1,0 +1,38 @@
+[package]
+name = "rust-web-dev"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = "1"
+handle-errors = { path = "handle-errors" }
+mock-server = { path = "mock-server", version = "0.1.0" }
+tokio = { version = "1.2", features = ["full"] }
+warp = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# log = "0.4"
+# env_logger = "0.9"
+# log4rs = "1.0"
+uuid = { version = "0.8", features = ["v4"]}
+tracing = { version = "0.1", features = ["log"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sqlx = {  version = "0.5",  features = [ "runtime-tokio-rustls", "migrate", "postgres" ]  }
+reqwest = { version = "0.11", features = ["json"]}
+reqwest-middleware = "0.1.1"
+reqwest-retry = "0.1.1"
+rand = "0.8"
+rust-argon2 = "1.0"
+paseto = "2.0"
+chrono = "0.4.19"
+config = { version = "0.13.1", features = ["toml"] }
+clap = { version = "3.1.7", features = ["derive"] }
+proc-macro2 = "1.0.37"
+dotenv = "0.15.0"
+# openssl = { version = "0.10", features = ["vendored"] }
+
+[build-dependencies]
+syn = "1"
+platforms = "2.0.0"
